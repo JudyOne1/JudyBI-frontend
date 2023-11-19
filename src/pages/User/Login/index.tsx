@@ -1,19 +1,19 @@
 import Footer from '@/components/Footer';
-import {listChartByPageUsingPOST} from '@/services/yubi/chartController';
-import {getLoginUserUsingGET, userLoginUsingPOST} from '@/services/yubi/userController';
-import {Link} from '@@/exports';
-import {LockOutlined, UserOutlined} from '@ant-design/icons';
-import {LoginForm, ProFormText} from '@ant-design/pro-components';
-import {useEmotionCss} from '@ant-design/use-emotion-css';
-import {Helmet, history, useModel} from '@umijs/max';
-import {message, Tabs} from 'antd';
-import React, {useEffect, useState} from 'react';
-import {flushSync} from 'react-dom';
+import { listChartByPageUsingPOST } from '@/services/yubi/chartController';
+import { getLoginUserUsingGET, userLoginUsingPOST } from '@/services/yubi/userController';
+import { Link } from '@@/exports';
+import { LockOutlined, UserOutlined } from '@ant-design/icons';
+import { LoginForm, ProFormText } from '@ant-design/pro-components';
+import { useEmotionCss } from '@ant-design/use-emotion-css';
+import { Helmet, history, useModel } from '@umijs/max';
+import { message, Tabs } from 'antd';
+import React, { useEffect, useState } from 'react';
+import { flushSync } from 'react-dom';
 import Settings from '../../../../config/defaultSettings';
 
 const Login: React.FC = () => {
   const [type, setType] = useState<string>('account');
-  const {initialState, setInitialState} = useModel('@@initialState');
+  const { initialState, setInitialState } = useModel('@@initialState');
   const containerClassName = useEmotionCss(() => {
     return {
       display: 'flex',
@@ -85,7 +85,7 @@ const Login: React.FC = () => {
             minWidth: 280,
             maxWidth: '75vw',
           }}
-          logo={<img alt="logo" src="/logo.svg"/>}
+          logo={<img alt="logo" src="/logo.svg" />}
           title="Judy BI"
           subTitle={
             <a href="http://judyblog.top" target="_blank">
@@ -113,7 +113,7 @@ const Login: React.FC = () => {
                 name="userAccount"
                 fieldProps={{
                   size: 'large',
-                  prefix: <UserOutlined/>,
+                  prefix: <UserOutlined />,
                 }}
                 placeholder={'请输入用户名'}
                 rules={[
@@ -127,7 +127,7 @@ const Login: React.FC = () => {
                 name="userPassword"
                 fieldProps={{
                   size: 'large',
-                  prefix: <LockOutlined/>,
+                  prefix: <LockOutlined />,
                 }}
                 placeholder={'请输入密码'}
                 rules={[
@@ -148,7 +148,7 @@ const Login: React.FC = () => {
           </div>
         </LoginForm>
       </div>
-      <Footer/>
+      <Footer />
     </div>
   );
 };
