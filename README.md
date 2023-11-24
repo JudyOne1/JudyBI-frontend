@@ -1,5 +1,9 @@
 # Judy BI
 
+基于react+ant designe pro的BI项目前台 
+
+
+项目详情页：![JudyBI智能分析平台](https://github.com/JudyOne1/JudyBI-backend)
 
 ## Environment Prepare
 
